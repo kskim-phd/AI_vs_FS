@@ -19,8 +19,6 @@ UNETR [https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/B
 ## Prepare environment and data:
 Instructions to how to run FreeSurfer is upload in FS_readme.txt
 
-Set segmentation file into 'folder_number'_seg
-
 ## V-Net
 After running FreeSurfer, read VNET_readme.txt
 
