@@ -3,7 +3,7 @@
 
 We release preprocessing FS, V-Net, UNETR code.
 
-Collaborators: Juyoung Hahm 
+Collaborators: Juyoung Hahm, Kyungsu Kim
 
 Detailed instructions for testing the 3D image are as follows.
 
