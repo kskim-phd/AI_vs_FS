@@ -60,5 +60,7 @@ V-Net은 GPU 및 CPU 의 평가를 진행하며 각각의 평가 시간을 출�
 ## UNETR
 UNETR_readme.txt 를 읽어주세요.
 
-UNETR 은 Freesurfer skull striped 볼
+UNETR 은 Image_Tr 및 Image_Ts 폴더를 만들어 label, GT 를 불러옵니다.
+
+python 
 
