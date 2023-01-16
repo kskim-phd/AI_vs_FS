@@ -8,7 +8,7 @@ Collaborators: Juyoung Hahm, Kyungsu Kim
 Detailed instructions for testing the 3D images are as follows.
 
 ## Implementation
-A Tesnorflow & Pytorch implementation of segmentation are based on original V-Net & UNETR code.
+TesnorFlow and PyTorch implementation of segmentation are based on original V-Net & UNETR code.
 
 V-Net [https://github.com/faustomilletari/VNet] (Thanks to Fausto Milletari and Sagar Hukkire.)
 
