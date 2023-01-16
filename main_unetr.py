@@ -122,8 +122,8 @@ val_transforms = Compose(
     ]
 )
 
-data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"   #change
-split_JSON = "brain_V3.json"                        # Change
+data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"   # Data dir
+split_JSON = "brain_V3.json"                        # Data json
 datasets = data_dir + split_JSON
 datalist = load_decathlon_datalist(datasets, True, "training")
 val_files = load_decathlon_datalist(datasets, True, "validation")
@@ -148,8 +148,8 @@ val_loader = DataLoader(
 )
 
 
-
-#Create Model, Loss, Optimizer
+# Train phase
+# Create Model, Loss, Optimizer
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 torch.backends.cudnn.benchmark = True
 print_config()
