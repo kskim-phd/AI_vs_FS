@@ -47,7 +47,7 @@ Set segmentation file into 'folder_number'_seg
 ## V-Net
 VNET_readme.txt 를 읽어주세요.
 
-VNET 은 Freesurfer skull striped 볼륨을 인풋으로 이용하여 Freesurfer.py를통해 피클로 된 label, GT을 획득합니다.
+VNET 은 Freesurfer skull striped 볼륨을 인풋으로 이용하여 스크립트 Freesurfer.py, nii_to_pickle.py를 통해 피클로 된 label, GT을 획득합니다.
 
 python main_vnet.py 를 통해 논문에 기술한 실험 학습 및 평가를 실시한다.
 
