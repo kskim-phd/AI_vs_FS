@@ -20,7 +20,7 @@ train_gt = np.append(train_gt, DCM_vol, axis = 0)
 [DCM_vol, GT_vol] = load_pickle(DATA_PATH_C)
 test_data, test_gt = DCM_vol, GT_vol
 
-
+# 본 스크립트는 V-net 학습 및 평가가 진행됩니다. 학습은 GPU로 진행되며 평가는 GPU 와 CPU로 진행됩니다.
 # Train and evaluate the model
 model = V_NET(data_shape=DATA_SHAPE, output=OUTPUT, dim=DIM, kernel_size=KERNEL_SIZE, attention=ATTENTION) # V-net 모델 호출
 model.compile(optimizer=Adam(lr=LEARNING_RATE), loss=LOSS, metrics=METRICS)
