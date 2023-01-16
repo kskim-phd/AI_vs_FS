@@ -45,9 +45,15 @@ Instructions to how to run FreeSurfer is upload in FS_readme.txt
 Set segmentation file into 'folder_number'_seg
 
 ## V-Net
-please read VNET_readme.txt
+VNET_readme.txt 를 읽어주세요.
 
-python main_vnet.py
+VNET 은 피클로되어있는 Freesurfer skull striped 를 전처리를 통해 이용합니다.
+
+python main_vnet.py 를 통해 논문에 기술한 실험 학습 및 평가를 실시한다.
+
+V-Net은 GPU 및 CPU 의 평가를 진행하며 각각의 평가 시간을 출력한다.
+
+
 
 
 
