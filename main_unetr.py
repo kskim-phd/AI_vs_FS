@@ -41,9 +41,10 @@ import pdb
 
 print_config()
 
-#Setup data directory
+# 본 스크립트는 학습용 스크립트로 evaluation 및 gpu 평가 스크립트는 eval_unetr에 있습니다. 평가 가중치를 이용하기위한 학습진행용 스크립트입니다.
+# Setup data directory
 
-root_dir = '/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/'
+root_dir = '/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/' # UNETR 학습을 진행할 주 경로를 입력하세요.
 print(root_dir)
 
 #Setup transforms for training and validation
@@ -122,8 +123,8 @@ val_transforms = Compose(
     ]
 )
 
-data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"   # Data dir
-split_JSON = "brain_V3.json"                        # Data json file
+data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"   # 학습용 데이터가 존재하는 경로를 입력하세요.
+split_JSON = "brain_V3.json"                        # 학습용 데이터의 정보가 존재하는 json 및 txt의 경로를 입력하세요.
 datasets = data_dir + split_JSON
 datalist = load_decathlon_datalist(datasets, True, "training")
 val_files = load_decathlon_datalist(datasets, True, "validation")
