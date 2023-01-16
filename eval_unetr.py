@@ -43,7 +43,7 @@ import time
 import glob
 import nibabel as nib
 
-
+# 본 스크립트는 학습을 진행하여 생성된 가중치를 이용하여 평가를 진행합니다 평가는 GPU 와 CPU로 두번의 평가가 진행됩니다.
 root_dir = '/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/' # unetr 이 존재하는 경로를 작성하시오.
 val_transforms = Compose(
     [
