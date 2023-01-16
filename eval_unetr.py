@@ -117,7 +117,7 @@ with torch.no_grad(): # Use GPU
         val_inputs, (96, 96, 96), 4, model, overlap=0.8
     )
     stop = time.time()
-    print(f"Training time: {stop - start}s")
+    print(f"GPU time: {stop - start}s")
     result.append(torch.argmax(val_outputs, dim=1).detach().cpu().numpy()[0, :, :, :])
 
 with torch.no_grad(): # Use CPU
@@ -129,7 +129,7 @@ with torch.no_grad(): # Use CPU
         val_inputs, (96, 96, 96), 4, model, overlap=0.8
     )
     stop = time.time()
-    print(f"Training time: {stop - start}s")
+    print(f"CPU time: {stop - start}s")
     result.append(torch.argmax(val_outputs, dim=1).detach().cpu().numpy()[0, :, :, :])
 
 
