@@ -10,7 +10,7 @@ Detailed instructions for testing the 3D images are as follows.
 ## Implementation
 TesnorFlow and PyTorch implementation are based on original V-Net & UNETR code.
 
-V-Net, UNETR use original code
+The original code of V-Net, UNETR are the following:
 
 V-net: https://github.com/faustomilletari/VNet]
 
@@ -69,7 +69,8 @@ UNETR performs the evaluation using GPU and CPU and presents the processing time
 
 ![KakaoTalk_20230116_213508472](https://user-images.githubusercontent.com/70966997/212679697-6022602b-0dcf-4365-bf5c-b831db225132.jpg)
 
-a): V-net b): UNETR
+a): V-Net b): UNETR
+Segmentation results of a) CNN-based V-Net and b) ViT-based UNETR (left 3D images in first column and red-highlighted areas in second column) and FS (right 3D images in first column and blue-highlighted areas in second column) for each brain structure. 
 
 ## Acknowledgement
 
