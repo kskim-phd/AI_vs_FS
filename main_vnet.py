@@ -22,7 +22,7 @@ test_data, test_gt = DCM_vol, GT_vol
 
 
 # Train and evaluate the model
-model = V_NET(data_shape=DATA_SHAPE, output=OUTPUT, dim=DIM, kernel_size=KERNEL_SIZE, attention=ATTENTION) # load model
+model = V_NET(data_shape=DATA_SHAPE, output=OUTPUT, dim=DIM, kernel_size=KERNEL_SIZE, attention=ATTENTION) # V-net 모델 호출
 model.compile(optimizer=Adam(lr=LEARNING_RATE), loss=LOSS, metrics=METRICS)
 model.summary()
 
@@ -30,14 +30,14 @@ model.fit(train_data, train_gt, batch_size=BATCH_SIZE, epochs=EPOCHS, validation
 model.evaluate(test_data, test_gt)
 
 # save model at 'model_save'
-model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.h5') # model save
+model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.h5') # 모델의 가중치를 저장할 경로를 입력하시오. (가중치는 weight로 적으시면 됩니다.)
 
 
 
 # save test pickle at 'test_result
 test_result = model.predict(test_data)
-result_path = '/tmp/update_code/test_result/github'
-result_file = '/brainmask_caudate_C.pkl'
+result_path = '/tmp/update_code/test_result/github' # 결과를 저장할 경로를 입력하시오.
+result_file = '/brainmask_caudate_C.pkl' # 결과 저장할 피클 이름을 작성하시오.
 save_pickle(result_path + result_file, [test_result, test_data]) # prediction result, brainmask
 
 #GPU use evalutation
@@ -67,5 +67,5 @@ for i in range(len(test_data)):
 result_df = pd.DataFrame(result)  
 time_df = pd.DataFrame(time_data)
 df = pd.concat([result_df, time_df], axis=1)
-excel_path = '/tmp/update_code/csv_files/github/' 
-df.to_excel(excel_path + 'brainmask_putamen_C.xlsx') #change
+excel_path = '/tmp/update_code/csv_files/github/' # test 결과를 저장할 엑셀 경로를 입력하시오.
+df.to_excel(excel_path + 'brainmask_putamen_C.xlsx') # test 결과를 저장할 엑셀 이름을 입력하시오.
