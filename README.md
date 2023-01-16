@@ -1,18 +1,18 @@
 # AI_vs_FS
 # Comparative Validation of AI against non-AI in MRI Volumetry for Diagnosis of Parkinsonian Syndrome
 
-We release preprocessing FS, V-Net, UNETR code.
+We released preprocessing FS, V-Net, and UNETR codes.
 
 Collaborators: Juyoung Hahm, Kyungsu Kim
 
-Detailed instructions for testing the 3D image are as follows.
+Detailed instructions for testing the 3D images are as follows.
 
 ## Implementation
-A Tesnorflow & Pytorch implementation of segmentation based on original V-Net & UNETR code.
+A Tesnorflow & Pytorch implementation of segmentation are based on original V-Net & UNETR code.
 
-V-Net [https://github.com/faustomilletari/VNet] (Thanks for Fausto Milletari and Sagar Hukkire.)
+V-Net [https://github.com/faustomilletari/VNet] (Thanks to Fausto Milletari and Sagar Hukkire.)
 
-UNETR [https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/BTCV] (Thank you for Ali Hatamizadeh and other contributors)
+UNETR [https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/BTCV] (Thanks to Ali Hatamizadeh and other contributors)
 
 ## Main reference Package
 
@@ -37,34 +37,23 @@ pytorch
 tensorflow
 
 ## Multi view dataset
-Please send me a request email (kskim.doc@gmail.com) for that inference sample data (As this work is under review, so it is open to reviewers only)
+Please request an email (kskim.doc@gmail.com) for the inference sample data (as this work is under review, it is open to reviewers only).
 
 ## Prepare environment and data:
-Instructions to how to run FreeSurfer is upload in FS_readme.txt
+Instructions on how to run FreeSurfer are uploaded in FS_readme.txt
 
 Set segmentation file into 'folder_number'_seg
 
 ## V-Net
-VNET_readme.txt 를 읽어주세요.
+Please read VNET_readme.txt to run the V-Net code.
 
-VNET 은 Freesurfer skull striped 볼륨을 인풋으로 이용하여 스크립트 Freesurfer.py, nii_to_pickle.py를 통해 피클로 된 label, GT을 획득합니다.
+Using skull-striped volume from FreeSurfer as input for V-Net, we obtained the label and GT in pickle format through FreeSurfer.py, nii_to_pkl.py.
 
-python main_vnet.py 를 통해 논문에 기술한 실험 학습 및 평가를 실시한다.
+With the command 'python main_vnet.py,' the model training and evaluation described in the article are conducted.
 
-V-Net은 GPU 및 CPU 의 평가를 진행하며 각각의 평가 시간을 출력한다.
-
-
-
+V-Net conducts the evaluation using GPU and CPU and presents the processing time for each frameworks.
 
 
 ## UNETR
-UNETR_readme.txt 를 읽어주세요.
-
-UNETR 은 Image_Tr 및 Image_Ts 폴더를 만들어 label, GT 를 불러옵니다.
-
-python main_unetr 를 실행하여 학습을 진행한뒤
-
-python eval_unetr 를 실행하여 평가를 진행합니다.
-
-UNETR은 GPU 및 CPU 의 평가를 진행하며 각각의 평가 시간을 출력한다.
+After running V-Net, please read UNETR_readme.txt
 
