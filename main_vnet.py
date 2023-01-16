@@ -1,12 +1,12 @@
 import pandas as pd
-from setting import *
+from setting import * # setting 에 따른 data 
 from pickle_load import *
 import os
 import pdb
 import numpy as np
 import time
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" # Use GPU 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" # Use GPU 그래픽카드 번호에 따른 GPU 번호 ㅇ비력
 # Load data, DCM_AUG_vol.shape = (#,128,256,256,1)
 
 [DCM_vol, GT_vol] = load_pickle(DATA_PATH_A)
