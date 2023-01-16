@@ -123,7 +123,7 @@ val_transforms = Compose(
 )
 
 data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"   # Data dir
-split_JSON = "brain_V3.json"                        # Data json
+split_JSON = "brain_V3.json"                        # Data json file
 datasets = data_dir + split_JSON
 datalist = load_decathlon_datalist(datasets, True, "training")
 val_files = load_decathlon_datalist(datasets, True, "validation")
@@ -155,7 +155,7 @@ torch.backends.cudnn.benchmark = True
 print_config()
 
 
-model = UNETR(
+model = UNETR( # Model load
     in_channels=1,
     out_channels=2, 
     img_size=(96, 96, 96),
