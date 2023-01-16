@@ -32,6 +32,10 @@ numpy
 
 time
 
+pytorch
+
+tesnorflow
+
 ## Multi view dataset
 Please send me a request email (kskim.doc@gmail.com) for that inference sample data (As this work is under review, so it is open to reviewers only)
 
