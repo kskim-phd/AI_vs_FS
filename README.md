@@ -58,5 +58,7 @@ V-Net은 GPU 및 CPU 의 평가를 진행하며 각각의 평가 시간을 출�
 
 
 ## UNETR
-After running V-Net, read UNETR_readme.txt
+UNETR_readme.txt 를 읽어주세요.
+
+UNETR 은 Freesurfer skull striped 볼
 
