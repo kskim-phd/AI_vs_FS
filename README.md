@@ -8,7 +8,7 @@ Collaborators: Juyoung Hahm, Kyungsu Kim
 Detailed instructions for testing the 3D image are as follows.
 
 ## Implementation
-A PyTorch implementation of segmentatino based on original V-Net & UNETR code.
+A PyTorch implementation of segmentation based on original V-Net & UNETR code.
 
 V-Net [https://github.com/faustomilletari/VNet] (Thanks for Fausto Milletari and Sagar Hukkire.)
 
