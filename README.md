@@ -63,4 +63,6 @@ Train the model with the command 'python main_unetr.py' and evaluate with the co
 
 UNETR performs the evaluation using GPU and CPU and presents the processing time for each frameworks.
 
+## Segmentation result
+
 
