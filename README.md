@@ -8,9 +8,9 @@ Collaborators: Juyoung Hahm, Kyungsu Kim
 Detailed instructions for testing the 3D images are as follows.
 
 ## Implementation
-TesnorFlow and PyTorch implementation of segmentation are based on original V-Net & UNETR code.
+TesnorFlow and PyTorch implementation are based on original V-Net & UNETR code.
 
-V-Net [https://github.com/faustomilletari/VNet] (Thanks to Fausto Milletari and Sagar Hukkire.)
+V-Net [https://github.com/faustomilletari/VNet] (Thanks to Fausto Milletari and Sagar Hukkire)
 
 UNETR [https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/BTCV] (Thanks to Ali Hatamizadeh and other contributors)
 
@@ -40,9 +40,9 @@ tensorflow
 Please request an email (kskim.doc@gmail.com) for the inference sample data (as this work is under review, it is open to reviewers only).
 
 ## Prepare environment and data:
-Instructions on how to run FreeSurfer are uploaded in FS_readme.txt
+Instructions on how to run FreeSurfer are uploaded in FS_readme.txt.
 
-Set segmentation file into 'folder_number'_seg
+Set segmentation file into 'folder_number'_seg.
 
 ## V-Net
 Please read VNET_readme.txt to run the V-Net code.
@@ -55,5 +55,5 @@ V-Net conducts the evaluation using GPU and CPU and presents the processing time
 
 
 ## UNETR
-After running V-Net, please read UNETR_readme.txt
+After running V-Net, please read UNETR_readme.txt.
 
