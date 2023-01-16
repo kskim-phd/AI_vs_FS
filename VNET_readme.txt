@@ -31,6 +31,6 @@ python FreeSurfer.py --label "$i"
 python nii_to_pkl.py 
 
 4. Run V-Net model
-python main.py
+python main_vnet.py
 
 
