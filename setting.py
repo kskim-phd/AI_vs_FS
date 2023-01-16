@@ -19,10 +19,10 @@ except RuntimeError as e:
 DATA_SHAPE = (128,256,256, 1) #(128, 256, 256, 1)  # (128, 128, 128, 1)
 AUGMENTATION = False  # load augmented dataset if true
 
-data_dir = '/tmp/output/input/'
-dataset_1 = 'BRAINMASK_A_CAUDATE_3_128_256_256.pkl'  
-dataset_2 = 'BRAINMASK_B_CAUDATE_3_128_256_256.pkl'  
-dataset_3 = 'BRAINMASK_C_CAUDATE_3_128_256_256.pkl' 
+data_dir = '/tmp/output/input/' # 데이터 경로
+dataset_1 = 'BRAINMASK_A_CAUDATE_3_128_256_256.pkl'  # 3fold 학습을 위한 fold1 데이터
+dataset_2 = 'BRAINMASK_B_CAUDATE_3_128_256_256.pkl'  # 3fold 학습을 위한 fold2 데이터
+dataset_3 = 'BRAINMASK_C_CAUDATE_3_128_256_256.pkl'  # 3fold 학습을 위한 fold3 데이터
 
 
 #three-fold    
@@ -33,8 +33,8 @@ DATA_PATH_C = data_dir + dataset_3
 
 
 # About model setup
-CNN_MODEL = V_NET  # select one of: V_NET
-ATTENTION = False  # True
+CNN_MODEL = V_NET  # select one of: V_NET CNN 모델 선택
+ATTENTION = False  # Attention hyper parameter 선택
 OUTPUT = 1
 DIM = 4 # or 8
 KERNEL_SIZE = 5
