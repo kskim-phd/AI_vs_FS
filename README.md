@@ -49,9 +49,9 @@ Please read VNET_readme.txt to run the V-Net code.
 
 Using skull-striped volume from FreeSurfer as input for V-Net, we obtained the label and GT in pickle format through FreeSurfer.py, nii_to_pkl.py.
 
-With the command 'python main_vnet.py,' the model training and evaluation described in the article are conducted.
+With the command 'python main_vnet.py,' the deep learning (DL) models' training and evaluation described in the research paper are conducted.
 
-V-Net conducts the evaluation using GPU and CPU and presents the processing time for each frameworks.
+V-Net perform the evaluation using GPU and CPU and present the processing time for each frameworks.
 
 
 ## UNETR
