@@ -106,7 +106,7 @@ result = []
 
 start = time.time()
 
-
+# GPU use evalutation
 result = []
 with torch.no_grad(): # Use GPU
   for i in range(136):
@@ -119,7 +119,8 @@ with torch.no_grad(): # Use GPU
     stop = time.time()
     print(f"GPU time: {stop - start}s")
     result.append(torch.argmax(val_outputs, dim=1).detach().cpu().numpy()[0, :, :, :])
-
+    
+# CPU use evaluation
 with torch.no_grad(): # Use CPU
   for i in range(136):
     img_name = os.path.split(val_ds[i]["image_meta_dict"]["filename_or_obj"])[1]
