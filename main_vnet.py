@@ -48,6 +48,7 @@ for i in range(len(test_data)):
     result.append([i, ] + model.evaluate(np.expand_dims(test_data[i], axis=0), np.expand_dims(test_gt[i], axis=0)))
     end = time.time()
     total_time = np.array('%.4f' % (end-start),  dtype=np.float64)
+    print(f"GPU time:{totaltime}")
     time_data.append(total_time.tolist())
 
 #CPU use evalutation
@@ -59,6 +60,7 @@ for i in range(len(test_data)):
     result.append([i, ] + model.evaluate(np.expand_dims(test_data[i], axis=0), np.expand_dims(test_gt[i], axis=0)))
     end = time.time()
     total_time = np.array('%.4f' % (end-start),  dtype=np.float64)
+    print(f"CPU time:{totaltime}")
     time_data.append(total_time.tolist())
     
 # save test result as excel
