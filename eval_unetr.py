@@ -116,6 +116,8 @@ with torch.no_grad():
     val_outputs = sliding_window_inference(
         val_inputs, (96, 96, 96), 4, model, overlap=0.8
     )
+    stop = time.time()
+    print(f"Training time: {stop - start}s")
     result.append(torch.argmax(val_outputs, dim=1).detach().cpu().numpy()[0, :, :, :])
 
 
@@ -124,8 +126,7 @@ result_path = '/media/dgxadmin/Seagate/hjy/unetr_data/A/pickle_A/'
 result_file = 'V3_A.pkl' # result pickle load
 result = np.array(result)
 save_pickle(result_path+ result_file, result)   
-stop = time.time()
-print(f"Training time: {stop - start}s")
+
 
 
 
