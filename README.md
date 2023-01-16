@@ -69,7 +69,7 @@ UNETR performs the evaluation using GPU and CPU and presents the processing time
 
 ![KakaoTalk_20230116_213508472](https://user-images.githubusercontent.com/70966997/212679697-6022602b-0dcf-4365-bf5c-b831db225132.jpg)
 
-Left: V-net Right: UNETR
+a): V-net b): UNETR
 
 ## Acknowledgement
 
