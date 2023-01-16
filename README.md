@@ -39,7 +39,7 @@ tensorflow
 ## Multi view dataset
 Please request an email (kskim.doc@gmail.com) for the inference sample data (as this work is under review, it is open to reviewers only).
 
-## Prepare environment and data:
+## Environment and data preparation
 Instructions on how to run FreeSurfer are uploaded in FS_readme.txt.
 
 Set segmentation file into 'folder_number'_seg.
@@ -56,4 +56,5 @@ V-Net perform the evaluation using GPU and CPU and present the processing time f
 
 ## UNETR
 After running V-Net, please read UNETR_readme.txt.
+
 
