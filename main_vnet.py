@@ -30,7 +30,7 @@ model.fit(train_data, train_gt, batch_size=BATCH_SIZE, epochs=EPOCHS, validation
 model.evaluate(test_data, test_gt)
 
 # save model at 'model_save'
-model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.h5') #change
+model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.h5') # model save
 
 
 
@@ -38,7 +38,7 @@ model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.
 test_result = model.predict(test_data)
 result_path = '/tmp/update_code/test_result/github'
 result_file = '/brainmask_caudate_C.pkl'
-save_pickle(result_path + result_file, [test_result, test_data]) #prediction result, brainmask
+save_pickle(result_path + result_file, [test_result, test_data]) # prediction result, brainmask
 
 #GPU use evalutation
 result = []
