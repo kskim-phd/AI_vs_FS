@@ -63,8 +63,8 @@ val_transforms = Compose(
     ]
 )
 
-data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"
-split_JSON = "brain_V3.json"  #Change
+data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"# Data dir
+split_JSON = "brain_V3.json"  # Data json load
 datasets = data_dir + split_JSON
 datalist = load_decathlon_datalist(datasets, True, "training")
 val_files = load_decathlon_datalist(datasets, True, "validation")
@@ -82,7 +82,7 @@ torch.backends.cudnn.benchmark = True
 print_config()
 
 
-model = UNETR(
+model = UNETR( # model load
     in_channels=1,
     out_channels=2, #14
     img_size=(96, 96, 96),
@@ -99,7 +99,7 @@ model = UNETR(
 
 
 
-model.load_state_dict(torch.load('/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/V3_A.pth')) #Change
+model.load_state_dict(torch.load('/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/V3_A.pth')) # weight load
 model.eval()
 result = []
 
@@ -121,7 +121,7 @@ with torch.no_grad():
 
 
 result_path = '/media/dgxadmin/Seagate/hjy/unetr_data/A/pickle_A/'
-result_file = 'V3_A.pkl' # Change
+result_file = 'V3_A.pkl' # result pickle load
 result = np.array(result)
 save_pickle(result_path+ result_file, result)   
 stop = time.time()
