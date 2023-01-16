@@ -44,7 +44,7 @@ import glob
 import nibabel as nib
 
 
-root_dir = '/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/'
+root_dir = '/home/dgxadmin/workspace/hjy_workspace/unetr/workspace/hjy_workspace/unetr/' # unetr 이 존재하는 경로를 작성하시오.
 val_transforms = Compose(
     [
         LoadImaged(keys=["image", "label"]),
@@ -63,8 +63,8 @@ val_transforms = Compose(
     ]
 )
 
-data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"# Data dir
-split_JSON = "brain_V3.json"  # Data json load
+data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/"# 데이터가 존재하는 root dir 를 작성하세요.
+split_JSON = "brain_V3.json"  # 데이터 정보가 담긴 json 혹은 txt 경로를 작성하시오.
 datasets = data_dir + split_JSON
 datalist = load_decathlon_datalist(datasets, True, "training")
 val_files = load_decathlon_datalist(datasets, True, "validation")
