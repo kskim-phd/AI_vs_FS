@@ -10,9 +10,11 @@ Detailed instructions for testing the 3D images are as follows.
 ## Implementation
 TesnorFlow and PyTorch implementation are based on original V-Net & UNETR code.
 
-V-Net [https://github.com/faustomilletari/VNet] (Thanks to Fausto Milletari and Sagar Hukkire)
+V-Net, UNETR use original code
 
-UNETR [https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/BTCV] (Thanks to Ali Hatamizadeh and other contributors)
+V-net: https://github.com/faustomilletari/VNet]
+
+UNETR: https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/BTCV
 
 ## Main reference Package
 
@@ -68,3 +70,9 @@ UNETR performs the evaluation using GPU and CPU and presents the processing time
 ![KakaoTalk_20230116_213508472](https://user-images.githubusercontent.com/70966997/212679697-6022602b-0dcf-4365-bf5c-b831db225132.jpg)
 
 Left: V-net Right: UNETR
+
+## Acknowledgement
+
+V-Net [https://github.com/faustomilletari/VNet] (Thanks to Fausto Milletari and Sagar Hukkire)
+
+UNETR [https://github.com/Project-MONAI/research-contributions/tree/main/UNETR/BTCV] (Thanks to Ali Hatamizadeh and other contributors)
