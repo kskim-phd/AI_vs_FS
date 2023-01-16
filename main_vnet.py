@@ -60,6 +60,7 @@ for i in range(len(test_data)):
     end = time.time()
     total_time = np.array('%.4f' % (end-start),  dtype=np.float64)
     time_data.append(total_time.tolist())
+    
 # save test result as excel
 result_df = pd.DataFrame(result)  
 time_df = pd.DataFrame(time_data)
