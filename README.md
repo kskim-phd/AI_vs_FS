@@ -55,6 +55,15 @@ V-Net perform the evaluation using GPU and CPU and present the processing time f
 
 
 ## UNETR
-After running V-Net, please read UNETR_readme.txt.
+
+UNETR_readme.txt 를 읽어주세요.
+
+UNETR 은 Image_Tr 및 Image_Ts 폴더를 만들어 label, GT 를 불러옵니다.
+
+python main_unetr 를 실행하여 학습을 진행한뒤
+
+python eval_unetr 를 실행하여 평가를 진행합니다.
+
+UNETR은 GPU 및 CPU 의 평가를 진행하며 각각의 평가 시간을 출력한다.
 
 
