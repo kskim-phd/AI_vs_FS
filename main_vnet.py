@@ -6,7 +6,7 @@ import pdb
 import numpy as np
 import time
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" # Use GPU 그래픽카드 번호에 따른 GPU 번호 입력
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" # Set GPU count number 
 # Load data, DCM_AUG_vol.shape = (#,128,256,256,1)
 
 [DCM_vol, GT_vol] = load_pickle(DATA_PATH_A)
@@ -20,7 +20,7 @@ train_gt = np.append(train_gt, DCM_vol, axis = 0)
 [DCM_vol, GT_vol] = load_pickle(DATA_PATH_C)
 test_data, test_gt = DCM_vol, GT_vol
 
-# 본 스크립트는 V-net 학습 및 평가가 진행됩니다. 학습은 GPU로 진행되며 평가는 GPU 와 CPU로 진행됩니다.
+# THis code runs the training and evaluation of V-Net. The training is run by GPU and performance is run by GPU and CPU.
 # Train and evaluate the model
 model = V_NET(data_shape=DATA_SHAPE, output=OUTPUT, dim=DIM, kernel_size=KERNEL_SIZE, attention=ATTENTION) # V-net 모델 호출
 model.compile(optimizer=Adam(lr=LEARNING_RATE), loss=LOSS, metrics=METRICS)
@@ -30,14 +30,14 @@ model.fit(train_data, train_gt, batch_size=BATCH_SIZE, epochs=EPOCHS, validation
 model.evaluate(test_data, test_gt)
 
 # save model at 'model_save'
-model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.h5') # 모델의 가중치를 저장할 경로를 입력하시오. (가중치는 weight로 적으시면 됩니다.)
+model.save('/tmp/update_code/model_save/github/brainmask_putamen_AB_test_result.h5') # directory of model's saved weight
 
 
 
 # save test pickle at 'test_result
 test_result = model.predict(test_data)
-result_path = '/tmp/update_code/test_result/github' # 결과를 저장할 경로를 입력하시오.
-result_file = '/brainmask_caudate_C.pkl' # 결과 저장할 피클 이름을 작성하시오.
+result_path = '/tmp/update_code/test_result/github' # directory of saved result 
+result_file = '/brainmask_caudate_C.pkl' # name of saved pickle of the result
 save_pickle(result_path + result_file, [test_result, test_data]) # prediction result, brainmask
 
 #GPU use evalutation
@@ -67,5 +67,5 @@ for i in range(len(test_data)):
 result_df = pd.DataFrame(result)  
 time_df = pd.DataFrame(time_data)
 df = pd.concat([result_df, time_df], axis=1)
-excel_path = '/tmp/update_code/csv_files/github/' # test 결과를 저장할 엑셀 경로를 입력하시오.
-df.to_excel(excel_path + 'brainmask_putamen_C.xlsx') # test 결과를 저장할 엑셀 이름을 입력하시오.
+excel_path = '/tmp/update_code/csv_files/github/' # directory of saved test in excel 
+df.to_excel(excel_path + 'brainmask_putamen_C.xlsx') # name of the saved test inn excel
