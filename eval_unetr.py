@@ -63,8 +63,8 @@ val_transforms = Compose(
     ]
 )
 
-data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/" # Write a root directory of the data
-split_JSON = "brain_V3.json"  # Write a json or txt directory of data information
+data_dir = "/media/dgxadmin/Seagate/hjy/unetr_data/A/" # root directory of the data
+split_JSON = "brain_V3.json"  # json or txt directory of data information
 datasets = data_dir + split_JSON
 datalist = load_decathlon_datalist(datasets, True, "training")
 val_files = load_decathlon_datalist(datasets, True, "validation")
